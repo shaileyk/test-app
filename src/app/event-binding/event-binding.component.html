@@ -1,4 +1,9 @@
 <h2>{{name}}</h2>
 
-<button (click)="onClick($event)">Greet</button>
-<button (click)="greeting='welcome shailey'">Greet</button>{{greeting}}
+
+<!--This is event Bubbling. To stop event bubbling use : stop propagation-->
+<div (click)="onDivClicked()">
+  <button class="btn btn-primary" (click)="onClick($event)">Greet</button>
+  <button class="btn btn-default" (click)="greeting='welcome shailey'">Greet</button>{{greeting}}
+
+</div>

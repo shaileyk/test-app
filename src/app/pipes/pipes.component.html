@@ -1,0 +1,17 @@
+<p>pipes works!</p>
+<!--Convert the title in uppercase-->
+{{course.title | uppercase}} <br />
+<!--The students should be properly seen like 30,123-->
+{{course.students | number}} <br />
+<!--Rating : If we want to specify the number of decimals number: '1.2-2' 2 - is the min and next 2 is max
+1.1 rounds of the value-->
+{{course.rating | number:'1.2-2'}} <br />
+{{course.rating | number:'1.1-1'}} <br />
+{{course.price | currency:'INR':true:'3.2-2'}} <br />
+{{course.releaseDate | date:'shortDate'}} <br />
+
+{{title | summary}} <br />
+{{title | summary:10}}
+
+<input type="text" [(ngModel)]="titleCaseTitle" />
+{{titleCaseTitle | titleCase}}
