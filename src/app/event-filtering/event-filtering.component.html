@@ -1,0 +1,15 @@
+<br>
+<input type="text" placeholder="OnKeyUp" (keyup)="onKeyUp($event)" /><br><br>
+<input type="text" placeholder="alternateKeyUp" (keyup.enter)="alternateKeyUp($event)" /><br><br>
+<input type="text" #email placeholder="getValueDirectlyOnKeyPress"
+  (keyup.enter)="getValueDirectlyOnKeyPress(email.value)" /><br><br>
+<!--You would not get the changed values-->
+<input type="text" [value]="twoWayBindingEmail" (keyup.enter)="twoWayBinding()" /><br><br>
+<!--One way to get the changed values (Not the best way)-->
+<input type="text" [value]="twoWayBindingEmail"
+  (keyup.enter)="twoWayBindingEmail = $event.target.value; twoWayBinding()" /><br><br>
+
+<!--One way to get the changed values (Not the best way) Banana in the box.
+    ngModel - Implements two way binding
+-->
+<input type="text" [(ngModel)]="ngModelEmail" (keyup.enter)="ngModelBinding()" /><br><br>

@@ -17,9 +17,14 @@ export class EventBindingComponent implements OnInit {
 
   onClick(event) {
     console.log(event);
+
     // this.greeting = this.name;
     this.greeting = event.type;
+    event.stopPropagation();
+  }
 
+  onDivClicked() {
+    console.log('Div was clicked');
   }
 
 }
