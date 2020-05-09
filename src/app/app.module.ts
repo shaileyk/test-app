@@ -16,6 +16,9 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { EventFilteringComponent } from './event-filtering/event-filtering.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { FillStarComponent } from './fill-star/fill-star.component';
+import { FavouriteComponent } from './favourite/favourite.component';
+import { BootstrapPanelComponent } from './bootstrap-panel/bootstrap-panel.component';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { FillStarComponent } from './fill-star/fill-star.component';
     PipesComponent,
     SummaryPipe,
     FillStarComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    FavouriteComponent,
+    BootstrapPanelComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

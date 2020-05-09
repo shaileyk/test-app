@@ -1,9 +1,26 @@
 <h1>Angular</h1>
 
-<app-authors></app-authors>
+<!-- <app-authors></app-authors>
 <app-property-binding></app-property-binding>
 <app-class-binding></app-class-binding>
 <app-event-binding></app-event-binding>
 <app-event-filtering></app-event-filtering>
 <app-pipes></app-pipes>
-<app-fill-star></app-fill-star>
+<app-fill-star></app-fill-star> -->
+
+<!--Use the alias always-->
+<!-- <favourite [fav]="post.isFavourite" (starChange)="onStarChange($event)"></favourite> -->
+
+<!-- <bootstrap-panel>
+  If we do not wish to add any divs but need just the content then use ng-container 
+  <div class="heading">Heading</div> 
+  <ng-container class="heading">Heading</ng-container>
+  <div class="body">
+    <h2>Hello World!</h2>
+    <p>This is about ng-content </p>
+  </div>
+</bootstrap-panel> -->
+
+<like [active]="tweets.isLiked" [heartCounts]="tweets.likesCount">
+
+</like>
